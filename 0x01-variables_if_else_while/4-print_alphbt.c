@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
 /**
  * main - main block
  * Description: Get a random alphabet and print in lower case
@@ -15,12 +13,14 @@ int main(void)
 	e = 'e';
 	q = 'q';
 
-	for (low = 'a'; low <= 'z'; low++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		if (low != e && low != q)
-		putchar(low);
+		if (ch != e && ch != q)
+		putchar(ch);
 
 	}
 	putchar('\n');
 	return (0);
 }
+
+
