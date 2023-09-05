@@ -1,30 +1,38 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
- * main - entry block
- *
+ * main - main block
+ * Description: Three number combination
  * Return: 0
- **/
+ */
+
 int main(void)
 {
-	int i, j, k;
+	int ch;
+	int n;
+	int m;
 
-	for (i = '0'; i <= '9'; i++)
+	for (ch = 48; ch < 58; ch++)
 	{
-		for (j = i + 1; j <= '9'; j++)
+		for (n = 49; n < 58; n++)
 		{
-			for (k = j + 1; k <= '9'; k++)
-			{
-				putchar(i);
-				putchar(j);
-				putchar(k);
-				if (i != '7' || j != '8' || k != '9')
+			for (m = 50; m < 58; m++)
+				if (n > ch && m > n)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(ch);
+					putchar(n);
+					putchar(m);
+
+					if (ch != 55 || n != 56 || m != 57)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
-			}
 		}
 	}
-	putchar('\n');
+
+	putchar ('\n');
 	return (0);
 }

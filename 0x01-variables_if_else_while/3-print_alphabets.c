@@ -1,22 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - print alphabet in lower and uppercase
- *
- *
- * Return: (0) Success
+ * main - main block
+ * Description: Get a random number and check its last digit
+ * Return: 0
  */
+
 int main(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; ++c)
-{
-putchar(c);
-}
-for (c = 'A'; c <= 'Z'; ++c)
-{
-putchar(c);
-}
-putchar('\n');
-return (0);
+	char ch = 'a';
+
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		ch++;
+	}
+	ch = 'A';
+
+		for (ch = 'A'; ch <= 'Z'; ch++)
+		{
+			putchar(ch);
+		}
+	putchar('\n');
+	return (0);
 }
