@@ -1,20 +1,25 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - prints all arguments
- * @argc:number of parameters
- * @argv:string
- * Return:Always 0
- */
-
-int main(int argc, char **argv)
+* main -> this is a function to print its name
+* @argc: argc parameter
+* @argv: an array of a command listed
+* Return: 0 for success
+*/
+int main(int argc, char *argv[])
 {
-	int i;
+	int mul, num1, num2;
 
-	for (i = 0; i < argc; i++)
+	if (argc != 3)
 	{
-		printf("%s\n", argv[i]);
+		printf("%s\n", "Error");
+		return (1);
 	}
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	mul = num1 * num2;
+
+	printf("%d\n", mul);
 	return (0);
 }
